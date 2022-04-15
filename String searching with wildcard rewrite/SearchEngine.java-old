@@ -1,0 +1,34 @@
+public class SearchEngine {
+    public static void main(String[] args){
+        System.out.println(find("_goog", "googgoogleggggoooglxeplexhexflexmexkex"));
+    }
+
+    static int find(String needle, String haystack){
+        for(int iNeed = 0, iHay = 0;; ){
+            if(iNeed == needle.length()){
+                return iHay - needle.length();
+            }
+            if(iHay == haystack.length()){
+                return -1;
+            }
+            if(needle.charAt(iNeed) == '_'){
+                iNeed++;
+                iHay++;
+            }
+            else if(haystack.charAt(iHay)!=needle.charAt(iNeed)){
+                if(iNeed == 0){
+                   iHay++; 
+                }
+                if(needle.charAt(0) == '_' && iNeed > 1){
+                    iHay--;
+                }
+                iNeed = 0;   
+            }else{
+                iNeed++;
+                iHay++;
+            }
+        }
+        
+      //  return -1;
+    }
+}
