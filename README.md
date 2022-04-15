@@ -1,4 +1,4 @@
-# AdamAndEve-OOP1-Pre-work
+# OOP1-Pre-work-Weekend
 Exercises from the first Pre-work in OOP Module in Weekend mode (january - february 2020)
 
 All programs wrote in java.
